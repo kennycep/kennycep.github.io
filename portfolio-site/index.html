@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kenny Cepeda | Stanford CS Coterm Applicant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal site for Kenny Cepeda Ramos, Stanford Biomedical Computation student and aspiring CS coterm student." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-mark">KCR</span>
+        <span class="logo-text">Kenny Cepeda Ramos</span>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#coursework">Coursework</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-tagline">Stanford • Biomedical Computation & Computer Science</p>
+          <h1>Hi, I’m Kenny.</h1>
+          <p class="hero-subtitle">
+            I’m a Stanford student pivoting from pre-med into computer science after realizing I thrive in software and systems work. 
+            I’ve completed two software engineering internships at Amazon and work on computational research with eye-tracking and gaze data.
+          </p>
+          <p class="hero-sub-subtitle">
+            I’m applying to the CS coterm to deepen my foundations and keep building at the intersection of computation, systems, and applied research.
+          </p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn primary-btn">View experience</a>
+            <a href="#contact" class="btn secondary-btn">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <!-- Replace headshot.jpg with your actual image file -->
+            <img src="assets/img/headshot.jpg" alt="Photo of Kenny Cepeda" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container section-inner two-column">
+        <div>
+          <h2>About</h2>
+          <p>
+            I’m an undergraduate at Stanford studying Biomedical Computation with a growing focus on computer science. 
+            I started on a pre-med track, but over time I realized that I’m most engaged when I’m building systems, 
+            debugging pipelines, and writing code that actually gets used.
+          </p>
+          <p>
+            Over the last few years I’ve shifted my energy into CS: taking core CS classes, working as a software engineering intern at Amazon across two summers, 
+            and contributing to computational research under Cameron Ellis in the Scaffolding of Cognition lab focused on gaze and counter-cueing.
+          </p>
+          <p>
+            I’m especially interested in problems where real data, performance constraints, and human behavior intersect.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <h3>At a glance</h3>
+          <ul>
+            <li><span class="label">School:</span> Stanford University</li>
+            <li><span class="label">Program:</span> Biomedical Computation (pivoting to CS)</li>
+            <li><span class="label">Interests:</span> Systems, data pipelines, applied ML, human-centered computation</li>
+            <li><span class="label">Experience:</span> 2x Amazon SWE intern, research assistant in an eye-tracking lab</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+      <div class="container section-inner">
+        <h2>Experience</h2>
+
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <h3>Software Development Engineer Intern</h3>
+              <p class="card-subtitle">Amazon • Summer 2024 & Summer 2025</p>
+            </header>
+            <ul class="card-list">
+              <li>Worked on production-level services, contributing features and bug fixes to internal tools used by other engineers.</li>
+              <li>Implemented and debugged data and training pipelines, focusing on reliability and clear logging instead of quick hacks.</li>
+              <li>Collaborated with engineers and scientists, learning to communicate technical trade-offs and document decisions clearly.</li>
+              <li>Got comfortable working with large codebases, reviews, and shipping code that real teams depend on.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Teaching & Community</h3>
+              <p class="card-subtitle">Residential & student leadership</p>
+            </header>
+            <ul class="card-list">
+              <li>Resident Assistant for a Stanford co-op, coordinating house systems, events, and conflict resolution for 50+ students.</li>
+              <li>Leadership roles in student groups, including policy and discussion spaces, balancing technical work with community building.</li>
+              <li>Experience planning logistics, managing time under pressure, and supporting people with very different needs and backgrounds.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container section-inner">
+        <h2>Selected Projects</h2>
+        <p class="section-intro">
+          These are a few of the technical things I’ve been working on. Some come from research, some from internships, and some from classes or side work.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <h3>Counter-cueing Gaze Pipeline</h3>
+              <p class="card-subtitle">Python • Eye-tracking • Data alignment</p>
+            </header>
+            <ul class="card-list">
+              <li>Debugged and documented a pipeline for processing gaze data and video, including fixing FPS vs movie-length mismatches.</li>
+              <li>Worked on aligning gaze samples, annotations, and stimuli timing for more reliable downstream analysis.</li>
+              <li>Collaborated on ideas for probabilistic models of gaze behavior based on experimental graphs and outcomes.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Legal Risk Index (Course Project)</h3>
+              <p class="card-subtitle">SQL • BigQuery • Data analysis</p>
+            </header>
+            <ul class="card-list">
+              <li>Used public datasets to explore litigation and financial data across firms and years.</li>
+              <li>Designed and ran queries over millions of rows, aggregating early to keep joins efficient.</li>
+              <li>Built a simple “legal risk” signal based on cases and firm fundamentals, and visualized key patterns.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>House Systems & Tools</h3>
+              <p class="card-subtitle">Python • Scripting • Automation</p>
+            </header>
+            <ul class="card-list">
+              <li>Wrote small scripts to help manage task assignments and rotations in a co-op house environment.</li>
+              <li>Focused on making tools that real people could actually use, not just one-off scripts.</li>
+              <li>Used feedback from housemates to adjust behavior and make things less brittle and more intuitive.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coursework -->
+    <section id="coursework" class="section section-alt">
+    <div class="container section-inner">
+        <h2>Relevant Coursework</h2>
+        <p class="section-intro">
+        Selected classes that shaped my growth in computer science and applied computation.
+        </p>
+        <div class="course-grid">
+        
+        <div>
+            <h3>Core CS & Computational Foundations</h3>
+            <ul>
+            <li>CS 106A – Programming Methodology</li>
+            <li>CS 106B – Programming Abstractions</li>
+            <li>CS 103 – Mathematical Foundations of Computing</li>
+            <li>CS 109 – Probability for Computer Scientists</li>
+            <li>CS 161 – Design & Analysis of Algorithms (in progress)</li>
+            <li>CS 145 – Introduction to Big Data Systems (in progress)</li>
+            <li>CS 121 – Equity & Governance of AI (in progress)</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Applied & Interdisciplinary</h3>
+            <ul>
+            <li>CS 148 – Computer Graphics & Imaging</li>
+            <li>BIOE 220 – Imaging & Image-based Anatomy</li>
+            <li>HUMBIO 4A – The Human Organism</li>
+            <li>HUMBIO 133 – Human Physiology</li>
+            <li>Projects involving real-world data, pipelines, and analysis</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Math & Analytical Background</h3>
+            <ul>
+            <li>MATH 20 – Calculus</li>
+            <li>MATH 21 – Calculus</li>
+            <li>MATH 51 – Linear Algebra & Multivariable Calculus</li>
+            <li>Additional quantitative reasoning through research & engineering work</li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container section-inner">
+        <h2>Contact</h2>
+        <p class="section-intro">
+          I’m happy to talk about CS coterm plans, software engineering, or projects at the intersection of computation and real-world systems.
+        </p>
+        <div class="contact-grid">
+          <div>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:kennycep@stanford.edu">kennycep@stanford.edu</a><br />
+              <a href="mailto:kennycepedaramos@gmail.com">kennycepedaramos@gmail.com</a>
+            </p>
+          </div>
+          <div>
+            <h3>Links</h3>
+            <p>
+              <a href="https://www.linkedin.com/in/kennycepedaramos/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kenny Cepeda Ramos</p>
+      <p class="footer-note">Built by hand with HTML &amp; CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple script to keep the year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
