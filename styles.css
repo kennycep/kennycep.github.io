@@ -370,6 +370,8 @@ body {
 .card-link {
   margin-top: 0.75rem;
   font-size: 0.9rem;
+  display: flex;
+  gap: 1.25rem;
 }
 
 .card-link a {
@@ -380,6 +382,24 @@ body {
 
 .card-link a:hover {
   text-decoration: underline;
+}
+
+.projects-subhead {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.cards-centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-centered .card {
+  flex: 1 1 340px;
+  max-width: 400px;
 }
 
 /* Coursework grid */
