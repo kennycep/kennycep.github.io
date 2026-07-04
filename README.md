@@ -1,6 +1,8 @@
 # kennycep.github.io
 
-Personal portfolio site for Kenny Cepeda Ramos, served via GitHub Pages.
+My personal portfolio site, built by hand with plain HTML and CSS and served through GitHub Pages. It covers my
+background across computation, cognitive science research, industry software engineering, and public-interest
+technology and policy.
 
 ## Structure
 
@@ -10,9 +12,13 @@ styles.css           All styles (no build step, no framework)
 assets/img/          Headshot and favicon
 ```
 
-## Local development
+I kept this framework-free on purpose. It's a single page, so a build pipeline would be more overhead than the
+site is worth.
 
-No build tooling required. Either open `index.html` directly in a browser, or serve it locally:
+## Running it locally
+
+No build tooling needed. I usually just open `index.html` directly in a browser, or serve it if I want relative
+paths to behave exactly like production:
 
 ```bash
 python3 -m http.server 8000
@@ -21,7 +27,8 @@ python3 -m http.server 8000
 
 ## Deployment
 
-Pushing to `main` deploys automatically via GitHub Pages (Settings &rarr; Pages &rarr; Deploy from branch: `main` / root).
+GitHub Pages deploys automatically from `main` (Settings &rarr; Pages &rarr; Deploy from branch: `main` / root),
+so shipping an update is just:
 
 ```bash
 git add -A
