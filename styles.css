@@ -367,6 +367,21 @@ body {
   font-size: 0.95rem;
 }
 
+.card-link {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.card-link a {
+  color: var(--stanford-red-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-link a:hover {
+  text-decoration: underline;
+}
+
 /* Coursework grid */
 .course-grid {
   display: grid;

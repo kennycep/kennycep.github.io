@@ -215,8 +215,8 @@
       <div class="container section-inner">
         <h2>Selected Projects</h2>
         <p class="section-intro">
-          A few of the technical things I&rsquo;ve worked on: some from research, some from internships, some
-          from classes.
+          A few of the technical things I&rsquo;ve worked on: some from research, some from internships, some from
+          classes, and a couple of full-stack apps I&rsquo;ve built and kept iterating on outside of coursework.
         </p>
 
         <div class="cards">
@@ -229,6 +229,31 @@
               <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment.</li>
               <li>Built validation checks comparing automated (OWLET) gaze output against 2&times;2 human-coded Left/Right categorizations.</li>
               <li>Contributed to early probabilistic-model ideas for gaze behavior based on experimental results.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>LabLog</h3>
+              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Supabase &middot; Full-stack</p>
+            </header>
+            <ul class="card-list">
+              <li>Built a private lab notebook and weekly-update generator: log work sessions, goals, tasks, and blockers, then turn a week of entries into a clean Slack update or meeting agenda for a PI.</li>
+              <li>Designed the full Postgres schema in Supabase (logs, sessions, goals, tasks, blockers, file issues) with Row Level Security so each user only ever sees their own data.</li>
+              <li>Built magic-link auth so the same account syncs cleanly between phone and laptop.</li>
+            </ul>
+            <p class="card-link"><a href="https://github.com/kennycep/LabLog" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>ResearchRadar</h3>
+              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Tailwind CSS &middot; In progress</p>
+            </header>
+            <ul class="card-list">
+              <li>Designing a research-discovery platform to help students find labs and opportunities that actually fit their interests, with an onboarding flow, a dashboard, and a lab directory.</li>
+              <li>Building a differentiating &ldquo;research news&rdquo; feed that surfaces world events affecting research funding and policy, not just paper alerts.</li>
+              <li>Shipped the Phase 1 MVP with seeded data across every page; next up is real auth and a database, then live feeds from sources like PubMed and arXiv.</li>
             </ul>
           </article>
 
