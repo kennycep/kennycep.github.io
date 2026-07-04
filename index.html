@@ -2,21 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kenny Cepeda | Stanford CS Coterm Applicant</title>
+  <title>Kenny Cepeda Ramos | Computation, Cognitive Science & Public-Interest Technology</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal site for Kenny Cepeda Ramos, Stanford Biomedical Computation Student" />
+  <meta name="description" content="Kenny Cepeda Ramos is a Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy. Research, software engineering, and public-interest tech." />
+  <meta name="theme-color" content="#8c1515" />
+  <link rel="canonical" href="https://kennycep.github.io/" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kenny Cepeda Ramos | Computation, Cognitive Science & Public-Interest Technology" />
+  <meta property="og:description" content="Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy." />
+  <meta property="og:image" content="https://kennycep.github.io/assets/img/headshot.jpg" />
+  <meta property="og:url" content="https://kennycep.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kenny Cepeda Ramos" />
+  <meta name="twitter:description" content="Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy." />
+  <meta name="twitter:image" content="https://kennycep.github.io/assets/img/headshot.jpg" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
-        <span class="logo-mark">KCR</span>
+      <a class="logo" href="#top" aria-label="Kenny Cepeda Ramos, back to top">
+        <span class="logo-mark" aria-hidden="true">KCR</span>
         <span class="logo-text">Kenny Cepeda Ramos</span>
-      </div>
-      <nav class="nav">
+      </a>
+      <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
         <a href="#projects">Projects</a>
         <a href="#coursework">Coursework</a>
         <a href="#contact">Contact</a>
@@ -24,29 +42,35 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-tagline">Stanford • Biomedical Computation: Informatics Track</p>
-          <h1>Hi, I’m Kenny.</h1>
+          <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
+          <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
           <p class="hero-subtitle">
-            I’m a Stanford student pivoting from pre-med into computer science after realizing I thrive in software and systems work. 
-            I’ve completed two software engineering internships at Amazon and work on computational research with eye-tracking and gaze data.
+            I&rsquo;m a Biomedical Computation student at Stanford, originally from the Bronx, working across
+            computation, cognitive science, AI, and public policy. I build the technical systems and analysis
+            workflows behind research and infrastructure &mdash; and I care just as much about who they&rsquo;re for.
           </p>
           <p class="hero-sub-subtitle">
-            I look forward to deepening my foundations and continuing to building at the intersection of computation, systems, and applied research.
+            Most recently: infrastructure work on Amazon&rsquo;s Nova model customization systems, and gaze-data
+            research in Stanford&rsquo;s Scaffolding of Cognition Lab.
           </p>
           <div class="hero-actions">
-            <a href="#experience" class="btn primary-btn">View experience</a>
+            <a href="#projects" class="btn primary-btn">View my work</a>
             <a href="#contact" class="btn secondary-btn">Get in touch</a>
           </div>
         </div>
         <div class="hero-photo">
           <div class="photo-frame">
-            <!-- Replace headshot.jpg with your actual image file -->
-            <img src="assets/img/DSC09704.jpg" alt="Photo of Kenny Cepeda" />
+            <img
+              src="assets/img/headshot.jpg"
+              width="480"
+              height="480"
+              alt="Kenny Cepeda Ramos smiling outdoors at Stanford, wearing a Stanford graduation stole"
+            />
           </div>
         </div>
       </div>
@@ -58,25 +82,33 @@
         <div>
           <h2>About</h2>
           <p>
-            I’m an undergraduate at Stanford studying Biomedical Computation with a growing focus on computer science. 
-            I started on a pre-med track, but over time I realized that I’m most engaged when I’m building systems, 
-            debugging pipelines, and writing code that actually gets used.
+            I grew up in the Bronx and came to Stanford on a pre-med track. Over time I realized I was most engaged
+            when I was building something &mdash; debugging a pipeline, writing a query, making a messy dataset
+            legible. That pulled me into Biomedical Computation, where I get to sit at the overlap of systems, data,
+            and human behavior.
           </p>
           <p>
-            Over the last few years I’ve shifted my energy into CS: taking core CS classes, working as a software engineering intern at Amazon across two summers, 
-            and contributing to computational research under Cameron Ellis in the Scaffolding of Cognition lab focused on gaze and counter-cueing.
+            Today that shows up in a few places: two summers as a software engineering intern on Amazon&rsquo;s AGI
+            team, working on infrastructure for Nova model customization and job-orchestration systems; ongoing
+            research in Stanford&rsquo;s Scaffolding of Cognition Lab, where I work on gaze-coding and behavioral data
+            pipelines for developmental cognition studies; and coursework and student leadership that keep me close
+            to questions of equity, governance, and how technology actually affects people.
           </p>
           <p>
-            I’m especially interested in problems where real data, performance constraints, and human behavior intersect.
+            I&rsquo;m drawn to work where technical rigor and public consequence both matter &mdash; AI governance,
+            health, education, and the kind of research and public-interest technology that has to hold up under
+            real scrutiny.
           </p>
         </div>
         <div class="about-highlights">
           <h3>At a glance</h3>
           <ul>
-            <li><span class="label">School:</span> Stanford University</li>
-            <li><span class="label">Program:</span> Biomedical Computation (pivoting to CS)</li>
-            <li><span class="label">Interests:</span> Systems, data pipelines, applied ML, human-centered computation</li>
-            <li><span class="label">Experience:</span> 2x Amazon SWE intern, research assistant in an Scaffolding of Cognition lab</li>
+            <li><span class="label">From:</span> The Bronx, NYC</li>
+            <li><span class="label">School:</span> Stanford University &mdash; B.S. Biomedical Computation</li>
+            <li><span class="label">Research:</span> Scaffolding of Cognition Lab (developmental cognition, gaze data)</li>
+            <li><span class="label">Industry:</span> Software Engineering Intern, Amazon AGI (2 summers)</li>
+            <li><span class="label">Leadership:</span> Resident Assistant &middot; Stanford Political Union E-Board &middot; CSA Vice President</li>
+            <li><span class="label">Focus areas:</span> AI governance &amp; policy, health &amp; cognition, public-interest technology</li>
           </ul>
         </div>
       </div>
@@ -86,30 +118,82 @@
     <section id="experience" class="section section-alt">
       <div class="container section-inner">
         <h2>Experience</h2>
+        <p class="section-intro">
+          Industry infrastructure work and academic research, side by side &mdash; both are about making systems
+          reliable enough for someone else to depend on them.
+        </p>
 
         <div class="cards">
           <article class="card">
             <header class="card-header">
-              <h3>Software Development Engineer Intern</h3>
-              <p class="card-subtitle">Amazon • Summer 2024 & Summer 2025</p>
+              <h3>Software Engineering Intern</h3>
+              <p class="card-subtitle">Amazon AGI &middot; Summer 2024 &amp; Summer 2025</p>
             </header>
             <ul class="card-list">
-              <li>Worked on production-level services, contributing features and bug fixes to internal tools used by other engineers.</li>
-              <li>Implemented and debugged data and training pipelines, focusing on reliability and clear logging instead of quick hacks.</li>
-              <li>Collaborated with engineers and scientists, learning to communicate technical trade-offs and document decisions clearly.</li>
-              <li>Got comfortable working with large codebases, reviews, and shipping code that real teams depend on.</li>
+              <li>Built and debugged infrastructure for Nova model customization and job-orchestration (job runner) systems used across internal ML workflows.</li>
+              <li>Improved pipeline reliability and logging so failures were diagnosable instead of silent, prioritizing traceability over quick patches.</li>
+              <li>Reviewed code and collaborated with engineers and applied scientists across two summers, learning to communicate technical trade-offs clearly.</li>
+              <li>Worked inside a large, fast-moving codebase and shipped changes that other teams&rsquo; infrastructure depended on.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-header">
-              <h3>Teaching & Community</h3>
-              <p class="card-subtitle">Residential & student leadership</p>
+              <h3>Research Assistant</h3>
+              <p class="card-subtitle">Scaffolding of Cognition Lab, Stanford Psychology (PI: Cameron Ellis) &middot; Ongoing</p>
             </header>
             <ul class="card-list">
-              <li>Resident Assistant for a Stanford co-op, coordinating house systems, events, and conflict resolution for 50+ students.</li>
-              <li>Leadership roles in student groups, including policy and discussion spaces, balancing technical work with community building.</li>
-              <li>Experience planning logistics, managing time under pressure, and supporting people with very different needs and backgrounds.</li>
+              <li>Work on gaze-categorization and CounterCuing analysis, studying how young children&rsquo;s looking behavior reflects developing cognitive strategies.</li>
+              <li>Debug and validate a gaze-coding pipeline (2&times;2 Left/Right categorization), including reconciling automated eye-tracking output (OWLET) against human-coded behavioral data.</li>
+              <li>Fix data-alignment issues &mdash; FPS mismatches, stimulus-timing offsets &mdash; that would otherwise quietly corrupt downstream analysis.</li>
+              <li>Contribute to early modeling ideas for gaze behavior grounded in the lab&rsquo;s experimental data.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section">
+      <div class="container section-inner">
+        <h2>Leadership &amp; Community</h2>
+        <p class="section-intro">
+          Outside research and engineering, most of my time has gone into building spaces and systems for the
+          people around me.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <h3>Resident Assistant</h3>
+              <p class="card-subtitle">Stanford co-op housing</p>
+            </header>
+            <ul class="card-list">
+              <li>Coordinate house systems, programming, and conflict resolution for 50+ residents in a self-governing co-op.</li>
+              <li>Build lightweight tools for scheduling and task rotations to keep the house running smoothly.</li>
+              <li>Support residents through everything from day-to-day logistics to harder conversations.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>E-Board Member</h3>
+              <p class="card-subtitle">Stanford Political Union</p>
+            </header>
+            <ul class="card-list">
+              <li>Help run a nonpartisan space for structured political debate and discussion across the ideological spectrum.</li>
+              <li>Organize events and discussions that treat disagreement as something to do well, not avoid.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Vice President</h3>
+              <p class="card-subtitle">CSA</p>
+            </header>
+            <ul class="card-list">
+              <li>Help lead community-building, events, and mentorship within the organization.</li>
+              <li>Balance logistics &mdash; budgeting, planning, coordination &mdash; with the actual work of making people feel supported.</li>
             </ul>
           </article>
         </div>
@@ -117,47 +201,48 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section">
+    <section id="projects" class="section section-alt">
       <div class="container section-inner">
         <h2>Selected Projects</h2>
         <p class="section-intro">
-          These are a few of the technical things I’ve been working on. Some come from research, some from internships, and some from classes or side work.
+          A few of the technical things I&rsquo;ve worked on &mdash; some from research, some from internships, some
+          from classes.
         </p>
 
         <div class="cards">
           <article class="card">
             <header class="card-header">
-              <h3>Counter-cueing Gaze Pipeline</h3>
-              <p class="card-subtitle">Python • Eye-tracking • Data alignment</p>
+              <h3>Gaze &amp; CounterCuing Data Pipeline</h3>
+              <p class="card-subtitle">Python &middot; Eye-tracking &middot; Data validation</p>
             </header>
             <ul class="card-list">
-              <li>Debugged and documented a pipeline for processing gaze data and video, including fixing FPS vs movie-length mismatches.</li>
-              <li>Worked on aligning gaze samples, annotations, and stimuli timing for more reliable downstream analysis.</li>
-              <li>Collaborated on ideas for probabilistic models of gaze behavior based on experimental graphs and outcomes.</li>
+              <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment.</li>
+              <li>Built validation checks comparing automated (OWLET) gaze output against 2&times;2 human-coded Left/Right categorizations.</li>
+              <li>Contributed to early probabilistic-model ideas for gaze behavior based on experimental results.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-header">
-              <h3>Legal Risk Index (Course Project)</h3>
-              <p class="card-subtitle">SQL • BigQuery • Data analysis</p>
+              <h3>Legal Risk Index</h3>
+              <p class="card-subtitle">SQL &middot; BigQuery &middot; Public data &middot; Course project</p>
             </header>
             <ul class="card-list">
-              <li>Used public datasets to explore litigation and financial data across firms and years.</li>
-              <li>Designed and ran queries over millions of rows, aggregating early to keep joins efficient.</li>
-              <li>Built a simple “legal risk” signal based on cases and firm fundamentals, and visualized key patterns.</li>
+              <li>Queried millions of rows of public litigation and financial data across firms and years.</li>
+              <li>Aggregated early and indexed joins to keep multi-table queries performant at scale.</li>
+              <li>Built and visualized a simple &ldquo;legal risk&rdquo; signal linking litigation history to firm fundamentals &mdash; the kind of accountability-oriented data work that draws me toward public-interest tech.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-header">
-              <h3>House Systems & Tools</h3>
-              <p class="card-subtitle">Python • Scripting • Automation</p>
+              <h3>Co-op House Systems &amp; Tools</h3>
+              <p class="card-subtitle">Python &middot; Scripting &middot; Automation</p>
             </header>
             <ul class="card-list">
-              <li>Wrote small scripts to help manage task assignments and rotations in a co-op house environment.</li>
-              <li>Focused on making tools that real people could actually use, not just one-off scripts.</li>
-              <li>Used feedback from housemates to adjust behavior and make things less brittle and more intuitive.</li>
+              <li>Wrote scripts to manage task assignments and rotations for a self-governing co-op house.</li>
+              <li>Iterated based on real housemate feedback instead of shipping a one-off script and walking away.</li>
+              <li>A small example of building tools for people who aren&rsquo;t engineers.</li>
             </ul>
           </article>
         </div>
@@ -165,58 +250,69 @@
     </section>
 
     <!-- Coursework -->
-    <section id="coursework" class="section section-alt">
-    <div class="container section-inner">
+    <section id="coursework" class="section">
+      <div class="container section-inner">
         <h2>Relevant Coursework</h2>
         <p class="section-intro">
-        Selected classes that shaped my growth in computer science and applied computation.
+          Selected coursework spanning computation, data systems, technology policy, and cognitive science.
         </p>
         <div class="course-grid">
-        
-        <div>
-            <h3>Core CS & Computational Foundations</h3>
-            <ul>
-            <li>CS 106A – Programming Methodology</li>
-            <li>CS 106B – Programming Abstractions</li>
-            <li>CS 103 – Mathematical Foundations of Computing</li>
-            <li>CS 109 – Probability for Computer Scientists</li>
-            <li>CS 161 – Design & Analysis of Algorithms (in progress)</li>
-            <li>CS 145 – Introduction to Big Data Systems (in progress)</li>
-            <li>CS 121 – Equity & Governance of AI (in progress)</li>
-            </ul>
-        </div>
 
-        <div>
-            <h3>Applied & Interdisciplinary</h3>
+          <div>
+            <h3>Computation &amp; Biomedical Systems</h3>
             <ul>
-            <li>CS 148 – Computer Graphics & Imaging</li>
-            <li>BIOE 220 – Imaging & Image-based Anatomy</li>
-            <li>HUMBIO 4A – The Human Organism</li>
-            <li>HUMBIO 133 – Human Physiology</li>
-            <li>Projects involving real-world data, pipelines, and analysis</li>
+              <li>CS 106A &ndash; Programming Methodology</li>
+              <li>CS 106B &ndash; Programming Abstractions</li>
+              <li>CS 107 &ndash; Computer Organization &amp; Systems</li>
+              <li>CS 148 &ndash; Computer Graphics &amp; Imaging</li>
+              <li>CS 348C &ndash; Computer Graphics: Animation &amp; Simulation</li>
+              <li>BIOE 220 &ndash; Imaging &amp; Image-Based Human Anatomy</li>
+              <li>MED 175B &ndash; Biodesign Fundamentals</li>
             </ul>
-        </div>
+          </div>
 
-        <div>
-            <h3>Math & Analytical Background</h3>
+          <div>
+            <h3>Data Systems &amp; Algorithms</h3>
             <ul>
-            <li>MATH 20 – Calculus</li>
-            <li>MATH 21 – Calculus</li>
-            <li>MATH 51 – Linear Algebra & Multivariable Calculus</li>
-            <li>Additional quantitative reasoning through research & engineering work</li>
+              <li>CS 103 &ndash; Mathematical Foundations of Computing</li>
+              <li>CS 109 &ndash; Probability for Computer Scientists</li>
+              <li>CS 145 &ndash; Introduction to Big Data Systems</li>
+              <li>CS 161 &ndash; Design &amp; Analysis of Algorithms</li>
+              <li>MATH 51 &ndash; Linear Algebra &amp; Multivariable Calculus</li>
             </ul>
-        </div>
+          </div>
+
+          <div>
+            <h3>AI Governance, Ethics &amp; Tech Policy</h3>
+            <ul>
+              <li>CS 121 &ndash; Equity &amp; Governance for Artificial Intelligence</li>
+              <li>BIOE 131 &ndash; Ethics in Bioengineering</li>
+              <li>PSYCH 35 &ndash; Minds and Machines</li>
+              <li>POLISCI 140P &ndash; Populism and the Erosion of Democracy</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Psychology, Cognition &amp; Developmental Science</h3>
+            <ul>
+              <li>PSYCH 1 &ndash; Introduction to Psychology</li>
+              <li>PSYCH 45 &ndash; Introduction to Learning and Memory</li>
+              <li>PSYCH 195 &ndash; Special Laboratory Projects (Scaffolding of Cognition Lab)</li>
+              <li>HUMBIO 4A / HUMBIO 133 &ndash; The Human Organism / Human Physiology</li>
+            </ul>
+          </div>
 
         </div>
-    </div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
       <div class="container section-inner">
         <h2>Contact</h2>
         <p class="section-intro">
-          I’m happy to talk about CS coterm plans, software engineering, or projects at the intersection of computation and real-world systems.
+          I&rsquo;m happy to talk about research, software engineering, AI governance and policy, or anything at the
+          intersection of computation and real-world systems.
         </p>
         <div class="contact-grid">
           <div>
@@ -230,6 +326,7 @@
             <h3>Links</h3>
             <p>
               <a href="https://www.linkedin.com/in/kennycepedaramos/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
+              <a href="https://github.com/kennycep" target="_blank" rel="noopener noreferrer">GitHub</a>
             </p>
           </div>
         </div>
@@ -239,13 +336,12 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Kenny Cepeda Ramos</p>
+      <p>&copy; <span id="year"></span> Kenny Cepeda Ramos</p>
       <p class="footer-note">Built by hand with HTML &amp; CSS.</p>
     </div>
   </footer>
 
   <script>
-    // Simple script to keep the year current
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
