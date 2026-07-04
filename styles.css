@@ -298,6 +298,22 @@ body {
   gap: 2rem;
 }
 
+.about-subhead {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--stanford-red-dark);
+}
+
+.about-list {
+  padding-left: 1.1rem;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+}
+
 .about-highlights h3 {
   margin-bottom: 0.75rem;
 }
