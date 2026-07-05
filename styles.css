@@ -1,5 +1,5 @@
 /* ============================================================
-   Kenny Cepeda Ramos — portfolio styles
+   Kenny Cepeda Ramos, portfolio styles
    Palette: Stanford cardinal + Dominican tricolor (azul, blanco, rojo)
    ============================================================ */
 
@@ -145,6 +145,17 @@ button:focus-visible {
   background: var(--tricolor);
 }
 
+/* Scroll progress accent along the header's bottom edge */
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--stanford-red), var(--dr-red));
+  border-radius: 0 999px 999px 0;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -222,9 +233,27 @@ button:focus-visible {
   overflow: hidden;
   border-bottom: 1px solid var(--border-gray);
   background:
+    linear-gradient(rgba(0, 45, 98, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 45, 98, 0.035) 1px, transparent 1px),
     radial-gradient(ellipse 60% 55% at 85% 20%, rgba(0, 45, 98, 0.07), transparent 70%),
     radial-gradient(ellipse 55% 60% at 10% 90%, rgba(206, 17, 38, 0.06), transparent 70%),
     linear-gradient(135deg, #ffffff, var(--cream));
+  background-size: 56px 56px, 56px 56px, auto, auto, auto;
+}
+
+/* Fade the grid out toward the bottom so it stays a texture, not a feature */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 30%, var(--cream) 96%);
+  opacity: 0.6;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-inner {
@@ -251,14 +280,61 @@ button:focus-visible {
   margin-bottom: 0.75rem;
 }
 
-.hero-heritage {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
+/* Photo stage: portrait plus slow orbit lines, a quiet nod to
+   research instrumentation and the tricolor palette */
+.photo-stage {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  margin: 0 auto;
 }
 
-.hero-heritage .flag {
-  margin-right: 0.3rem;
+.photo-orbit {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.photo-orbit-outer {
+  inset: -26px;
+  border: 1px dashed rgba(0, 45, 98, 0.28);
+  animation: orbit-spin 80s linear infinite;
+}
+
+.photo-orbit-inner {
+  inset: -13px;
+  border: 1px solid rgba(140, 21, 21, 0.14);
+  animation: orbit-spin 55s linear infinite reverse;
+}
+
+/* A single small marker riding each orbit so the motion reads */
+.photo-orbit-outer::before,
+.photo-orbit-inner::before {
+  content: "";
+  position: absolute;
+  top: -3.5px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+}
+
+.photo-orbit-outer::before {
+  background: var(--dr-blue);
+  opacity: 0.55;
+}
+
+.photo-orbit-inner::before {
+  background: var(--stanford-red);
+  opacity: 0.5;
+  width: 5px;
+  height: 5px;
+  top: -2.5px;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .hero-subtitle {
@@ -341,6 +417,14 @@ button:focus-visible {
   animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
+/* Location tag: no availability dot, quieter tone */
+.status-tags .tag-plain {
+  background-color: transparent;
+  border-color: rgba(0, 45, 98, 0.25);
+  color: var(--dr-blue);
+  box-shadow: none;
+}
+
 @keyframes pulse-dot {
   0%, 100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.35); }
   50% { box-shadow: 0 0 0 5px rgba(46, 125, 50, 0); }
@@ -386,10 +470,10 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Hero photo — ringed portrait */
+/* Hero photo: ringed portrait */
 .photo-frame {
-  width: 270px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
   border-radius: 999px;
   padding: 7px;
   background:
@@ -522,6 +606,16 @@ button:focus-visible {
   transform: scaleX(1);
 }
 
+.card-domain {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dr-blue);
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
 .card-header h3 {
   font-size: 1.12rem;
   margin-bottom: 0.25rem;
@@ -595,44 +689,37 @@ button:focus-visible {
   max-width: 400px;
 }
 
-/* Coursework grid */
+/* Coursework: flat, resume-style columns. Useful but secondary. */
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem 2.5rem;
 }
 
-.course-grid > div {
-  background: #ffffff;
-  border: 1px solid var(--border-gray);
-  border-radius: 14px;
-  padding: 1.4rem 1.3rem;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+.course-group {
+  border-top: 2px solid var(--border-gray);
+  padding-top: 0.85rem;
 }
 
-.course-grid > div:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lift);
-}
-
-.course-grid h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.course-group h3 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--stanford-red-dark);
+  margin-bottom: 0.6rem;
 }
 
-.course-grid ul {
-  padding-left: 1.1rem;
-  font-size: 0.95rem;
+.course-group ul {
+  list-style: none;
+  font-size: 0.92rem;
+  color: #3a352f;
 }
 
-.course-grid li {
-  margin-bottom: 0.25rem;
-}
-
-.course-grid li::marker {
-  color: var(--stanford-red);
+.course-group li {
+  margin-bottom: 0.3rem;
+  line-height: 1.45;
 }
 
 /* Contact */
@@ -643,18 +730,30 @@ button:focus-visible {
   max-width: 32rem;
 }
 
+.contact-grid > div {
+  border-top: 2px solid var(--border-gray);
+  padding-top: 0.85rem;
+}
+
 .contact-grid h3 {
-  font-size: 1rem;
-  margin-bottom: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stanford-red-dark);
+  margin-bottom: 0.5rem;
 }
 
 .contact-grid a {
   color: var(--stanford-red-dark);
   text-decoration: none;
+  line-height: 1.9;
 }
 
 .contact-grid a:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Footer */
@@ -730,7 +829,9 @@ button:focus-visible {
 
   .hero-text > *,
   .hero-photo,
-  .status-dot {
+  .status-dot,
+  .photo-orbit-outer,
+  .photo-orbit-inner {
     animation: none;
   }
 
@@ -764,7 +865,7 @@ button:focus-visible {
     margin-bottom: 1.5rem;
   }
 
-  .photo-frame {
+  .photo-stage {
     width: 210px;
     height: 210px;
   }

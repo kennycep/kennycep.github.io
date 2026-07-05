@@ -44,6 +44,7 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
@@ -53,11 +54,10 @@
         <div class="hero-text">
           <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
           <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
-          <p class="hero-heritage"><span class="flag" aria-hidden="true">🇩🇴</span>Bronx-raised, with Dominican roots. <span lang="es">Del Bronx, con ra&iacute;ces dominicanas.</span></p>
-          <ul class="status-tags" aria-label="Availability">
-            <li><span class="status-dot" aria-hidden="true"></span>Open to work</li>
+          <ul class="status-tags" aria-label="Availability and background">
+            <li><span class="status-dot" aria-hidden="true"></span>Open to research, policy &amp; tech roles</li>
             <li><span class="status-dot" aria-hidden="true"></span>Open to relocation</li>
-            <li><span class="status-dot" aria-hidden="true"></span>Research &middot; Policy &middot; Tech</li>
+            <li class="tag-plain">Bronx, NYC &rarr; Stanford, CA</li>
           </ul>
           <p class="hero-subtitle">
             I&rsquo;m a Biomedical Computation student at Stanford, originally from the Bronx, working across
@@ -74,13 +74,17 @@
           </div>
         </div>
         <div class="hero-photo">
-          <div class="photo-frame">
-            <img
-              src="assets/img/headshot.jpg"
-              width="480"
-              height="480"
-              alt="Kenny Cepeda Ramos smiling outdoors at Stanford, wearing a Stanford graduation stole"
-            />
+          <div class="photo-stage">
+            <span class="photo-orbit photo-orbit-outer" aria-hidden="true"></span>
+            <span class="photo-orbit photo-orbit-inner" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <img
+                src="assets/img/headshot.jpg"
+                width="480"
+                height="480"
+                alt="Kenny Cepeda Ramos standing beside the Burghers of Calais sculptures at Stanford, wearing a Stanford graduation stole over a white shirt"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -92,26 +96,30 @@
         <div>
           <h2>About</h2>
           <p>
-            I grew up in the Bronx and came to Stanford on a pre-med track. I ended up happiest when I was building
-            something: debugging a pipeline, writing a query, making a messy dataset legible. That pulled me into
-            Biomedical Computation, where I get to sit at the overlap of systems, data, and human behavior.
+            I study Biomedical Computation at Stanford, where my work moves between software systems, cognitive
+            science research, and questions about how technology shapes public life.
+          </p>
+          <p>
+            I grew up in a Dominican family in the Bronx and came to Stanford on a pre-med track. I ended up
+            happiest when I was building something: debugging a pipeline, writing a query, making a messy dataset
+            legible. That pulled me toward the overlap of systems, data, and human behavior, and it never quite
+            let go.
           </p>
 
           <h3 class="about-subhead">What I work on now</h3>
           <ul class="about-list">
             <li><strong>Amazon AGI:</strong> infrastructure for Nova model customization and job-orchestration systems.</li>
-            <li><strong>Scaffolding of Cognition Lab:</strong> gaze-coding and behavioral data pipelines for developmental cognition research.</li>
+            <li><strong>Scaffolding of Cognition Lab:</strong> gaze-coding and behavioral data workflows for developmental cognition research.</li>
             <li><strong>Coursework and student leadership</strong> centered on equity, governance, and how technology actually affects people.</li>
           </ul>
 
           <h3 class="about-subhead">Why policy matters to me</h3>
           <p>
-            The policy side isn&rsquo;t an add-on, it&rsquo;s the part that makes the technical work worth doing.
-            I&rsquo;m especially interested in AI governance: how models get evaluated, who sets the rules for
-            deployment, and what accountability looks like once a system is actually in use. That interest is
-            grounded in coursework like CS 121 (Equity and Governance for Artificial Intelligence) and BIOE 131
-            (Ethics in Bioengineering), and in projects like my Legal Risk Index, where litigation and public data
-            intersect.
+            The policy side is not an add-on. It is the part that makes the technical work worth doing. I am most
+            interested in AI governance: how models get evaluated, who sets the rules for deployment, and what
+            accountability looks like once a system is in use. That interest is grounded in coursework like CS 121
+            (Equity and Governance for Artificial Intelligence) and BIOE 131 (Ethics in Bioengineering), and in
+            projects like my Legal Risk Index, where litigation and public data intersect.
           </p>
         </div>
         <div class="about-highlights">
@@ -154,13 +162,13 @@
           <article class="card">
             <header class="card-header">
               <h3>Research Assistant</h3>
-              <p class="card-subtitle">Scaffolding of Cognition Lab, Stanford Psychology (PI: Cameron Ellis) &middot; November 2023 &ndash; Present</p>
+              <p class="card-subtitle">Scaffolding of Cognition Lab, Stanford Psychology (PI: Cameron Ellis) &middot; Nov. 2023 &ndash; Present</p>
             </header>
             <ul class="card-list">
-              <li>Work on gaze-categorization and CounterCuing analysis, studying how young children&rsquo;s looking behavior reflects developing cognitive strategies.</li>
-              <li>Debug and validate a gaze-coding pipeline (2&times;2 Left/Right categorization), including reconciling automated eye-tracking output (OWLET) against human-coded behavioral data.</li>
-              <li>Fix data-alignment issues (FPS mismatches, stimulus-timing offsets) that would otherwise quietly corrupt downstream analysis.</li>
-              <li>Contribute to early modeling ideas for gaze behavior grounded in the lab&rsquo;s experimental data.</li>
+              <li>Long-running role in developmental cognition research, working on gaze categorization and CounterCuing analysis of how young children&rsquo;s looking behavior reflects developing cognitive strategies.</li>
+              <li>Grew from manual behavioral coding into computational workflows: validating automated eye-tracking output (OWLET) against human-coded 2&times;2 Left/Right categorizations.</li>
+              <li>Debug and adapt analysis scripts across experiment versions, fixing data-alignment issues (FPS mismatches, stimulus-timing offsets) before they corrupt downstream results.</li>
+              <li>Turn messy participant data into validated, analysis-ready outputs that both researchers and code can rely on.</li>
             </ul>
           </article>
         </div>
@@ -195,9 +203,9 @@
               <p class="card-subtitle">Stanford Political Union</p>
             </header>
             <ul class="card-list">
-              <li>Help run a nonpartisan space for structured political debate and discussion across the ideological spectrum.</li>
-              <li>Support event logistics for large speaker events, including visits from former Supreme Court Justice Stephen Breyer and commentator Curtis Sliwa.</li>
-              <li>Organize events and discussions that treat disagreement as something to do well, not avoid.</li>
+              <li>Support operations for Stanford Political Union events, helping with the behind-the-scenes coordination that lets campus political programming run smoothly.</li>
+              <li>The organization hosts large-scale events and has brought in speakers ranging from former U.S. Supreme Court Justice Stephen Breyer to public figures such as Curtis Sliwa.</li>
+              <li>Help maintain a nonpartisan space for structured debate across the ideological spectrum, where disagreement is something to do well rather than avoid.</li>
             </ul>
           </article>
 
@@ -220,44 +228,47 @@
       <div class="container section-inner">
         <h2>Selected Projects</h2>
         <p class="section-intro">
-          A few of the technical things I&rsquo;ve worked on: some from research, some from internships, some from
-          classes, and a couple of full-stack apps I&rsquo;ve built and kept iterating on outside of coursework.
+          Work from research, internships, and classes, plus two full-stack apps I keep iterating on outside of
+          coursework. Each one leans toward research, policy, or tech; most sit somewhere in between.
         </p>
 
         <div class="cards">
           <article class="card">
+            <p class="card-domain">Research &middot; Tech</p>
             <header class="card-header">
-              <h3>Gaze &amp; CounterCuing Data Pipeline</h3>
+              <h3>Gaze &amp; CounterCuing Analysis Pipeline</h3>
               <p class="card-subtitle">Python &middot; Eye-tracking &middot; Data validation</p>
             </header>
             <ul class="card-list">
-              <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment.</li>
-              <li>Built validation checks comparing automated (OWLET) gaze output against 2&times;2 human-coded Left/Right categorizations.</li>
-              <li>Contributed to early probabilistic-model ideas for gaze behavior based on experimental results.</li>
+              <li>A research analysis workflow for processing gaze and behavioral data from developmental cognition experiments.</li>
+              <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment, and adapted scripts across experiment versions.</li>
+              <li>Built validation checks comparing automated (OWLET) output against human-coded 2&times;2 Left/Right categorizations, so the lab can trust what the numbers say.</li>
             </ul>
           </article>
 
           <article class="card">
+            <p class="card-domain">Policy &middot; Tech</p>
             <header class="card-header">
               <h3>Legal Risk Index</h3>
               <p class="card-subtitle">SQL &middot; BigQuery &middot; Public data &middot; Course project</p>
             </header>
             <ul class="card-list">
-              <li>Queried millions of rows of public litigation and financial data across firms and years.</li>
-              <li>Aggregated early and indexed joins to keep multi-table queries performant at scale.</li>
-              <li>Built and visualized a simple &ldquo;legal risk&rdquo; signal linking litigation history to firm fundamentals, the kind of accountability-oriented data work that draws me toward public-interest tech.</li>
+              <li>An exploration of how legal and regulatory risk can be structured and scored from public data, not a deployed legal product.</li>
+              <li>Queried millions of rows of litigation and financial data across firms and years, aggregating early and indexing joins to keep queries fast.</li>
+              <li>Built and visualized a simple risk signal linking litigation history to firm fundamentals, the kind of accountability-oriented data work that pulls me toward public-interest tech.</li>
             </ul>
           </article>
 
           <article class="card">
+            <p class="card-domain">Community &middot; Tech</p>
             <header class="card-header">
               <h3>Co-op House Systems &amp; Tools</h3>
               <p class="card-subtitle">Python &middot; Scripting &middot; Automation</p>
             </header>
             <ul class="card-list">
-              <li>Wrote scripts to manage task assignments and rotations for a self-governing co-op house.</li>
-              <li>Iterated based on real housemate feedback instead of shipping a one-off script and walking away.</li>
-              <li>A small example of building tools for people who aren&rsquo;t engineers.</li>
+              <li>Scripts that manage task assignments and rotations for a self-governing co-op house of 50+ residents.</li>
+              <li>Iterated on real housemate feedback instead of shipping a one-off script and walking away.</li>
+              <li>A small, honest example of building tools for people who are not engineers.</li>
             </ul>
           </article>
         </div>
@@ -265,14 +276,15 @@
         <h3 class="projects-subhead">Personal Projects</h3>
         <div class="cards cards-centered">
           <article class="card">
+            <p class="card-domain">Research operations &middot; Tech</p>
             <header class="card-header">
               <h3>LabLog</h3>
               <p class="card-subtitle">Next.js &middot; TypeScript &middot; Supabase &middot; Full-stack</p>
             </header>
             <ul class="card-list">
-              <li>Built a private lab notebook and weekly-update generator: log work sessions, goals, tasks, and blockers, then turn a week of entries into a clean Slack update or meeting agenda for a PI.</li>
-              <li>Designed the full Postgres schema in Supabase (logs, sessions, goals, tasks, blockers, file issues) with Row Level Security so each user only ever sees their own data.</li>
-              <li>Built magic-link auth so the same account syncs cleanly between phone and laptop.</li>
+              <li>Research operations infrastructure: a private lab notebook for logging work sessions, hours, goals, tasks, and blockers, built for lab accountability.</li>
+              <li>Turns a week of entries into a clean Slack update or meeting agenda for a PI, so the reporting work stops eating research time.</li>
+              <li>Full Postgres schema in Supabase with Row Level Security and magic-link auth, so one account syncs privately between phone and laptop.</li>
             </ul>
             <p class="card-link">
               <a href="https://github.com/kennycep/LabLog" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
@@ -281,14 +293,15 @@
           </article>
 
           <article class="card">
+            <p class="card-domain">Public-interest tech &middot; Research access</p>
             <header class="card-header">
               <h3>ResearchRadar</h3>
               <p class="card-subtitle">Next.js &middot; TypeScript &middot; Tailwind CSS &middot; In progress</p>
             </header>
             <ul class="card-list">
-              <li>Designing a research-discovery platform to help students find labs and opportunities that actually fit their interests, with an onboarding flow, a dashboard, and a lab directory.</li>
-              <li>Building a differentiating &ldquo;research news&rdquo; feed that surfaces world events affecting research funding and policy, not just paper alerts.</li>
-              <li>Shipped the Phase 1 MVP with seeded data across every page; next up is real auth and a database, then live feeds from sources like PubMed and arXiv.</li>
+              <li>A research discovery platform that helps students find labs and opportunities through structured interests, location filters, and career stage, treating research access as infrastructure.</li>
+              <li>Includes a research news feed that surfaces world events affecting research funding and policy, not just paper alerts.</li>
+              <li>Phase 1 MVP is live with seeded data across every page; next up is real auth and a database, then live feeds from sources like PubMed and arXiv.</li>
             </ul>
             <p class="card-link">
               <a href="https://github.com/kennycep/researchradar" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
@@ -308,47 +321,48 @@
         </p>
         <div class="course-grid">
 
-          <div>
-            <h3>Computation &amp; Biomedical Systems</h3>
+          <div class="course-group">
+            <h3>Computing, Systems &amp; Data</h3>
             <ul>
-              <li>CS 106A &ndash; Programming Methodology</li>
-              <li>CS 106B &ndash; Programming Abstractions</li>
-              <li>CS 107 &ndash; Computer Organization &amp; Systems</li>
-              <li>CS 148 &ndash; Computer Graphics &amp; Imaging</li>
-              <li>CS 348C &ndash; Computer Graphics: Animation &amp; Simulation</li>
-              <li>BIOE 220 &ndash; Imaging &amp; Image-Based Human Anatomy</li>
-              <li>MED 175B &ndash; Biodesign Fundamentals</li>
+              <li>CS 106A &middot; Programming Methodology</li>
+              <li>CS 106B &middot; Programming Abstractions</li>
+              <li>CS 103 &middot; Mathematical Foundations of Computing</li>
+              <li>CS 107 &middot; Computer Organization &amp; Systems</li>
+              <li>CS 109 &middot; Probability for Computer Scientists</li>
+              <li>CS 145 &middot; Introduction to Big Data Systems</li>
+              <li>CS 161 &middot; Design &amp; Analysis of Algorithms</li>
+              <li>CS 148 &middot; Computer Graphics &amp; Imaging</li>
+              <li>CS 348C &middot; Animation &amp; Simulation</li>
+              <li>MATH 51 &middot; Linear Algebra &amp; Multivariable Calculus</li>
             </ul>
           </div>
 
-          <div>
-            <h3>Data Systems &amp; Algorithms</h3>
+          <div class="course-group">
+            <h3>AI, Policy &amp; Ethics</h3>
             <ul>
-              <li>CS 103 &ndash; Mathematical Foundations of Computing</li>
-              <li>CS 109 &ndash; Probability for Computer Scientists</li>
-              <li>CS 145 &ndash; Introduction to Big Data Systems</li>
-              <li>CS 161 &ndash; Design &amp; Analysis of Algorithms</li>
-              <li>MATH 51 &ndash; Linear Algebra &amp; Multivariable Calculus</li>
+              <li>CS 121 &middot; Equity &amp; Governance for Artificial Intelligence</li>
+              <li>BIOE 131 &middot; Ethics in Bioengineering</li>
+              <li>POLISCI 140P &middot; Populism &amp; the Erosion of Democracy</li>
             </ul>
           </div>
 
-          <div>
-            <h3>AI Governance, Ethics &amp; Tech Policy</h3>
+          <div class="course-group">
+            <h3>Cognition, Psychology &amp; Development</h3>
             <ul>
-              <li>CS 121 &ndash; Equity &amp; Governance for Artificial Intelligence</li>
-              <li>BIOE 131 &ndash; Ethics in Bioengineering</li>
-              <li>PSYCH 35 &ndash; Minds and Machines</li>
-              <li>POLISCI 140P &ndash; Populism and the Erosion of Democracy</li>
+              <li>PSYCH 1 &middot; Introduction to Psychology</li>
+              <li>PSYCH 35 &middot; Minds and Machines</li>
+              <li>PSYCH 45 &middot; Introduction to Learning and Memory</li>
+              <li>PSYCH 195 &middot; Special Laboratory Projects (Scaffolding of Cognition Lab)</li>
             </ul>
           </div>
 
-          <div>
-            <h3>Psychology, Cognition &amp; Developmental Science</h3>
+          <div class="course-group">
+            <h3>Biomedical Systems &amp; Health</h3>
             <ul>
-              <li>PSYCH 1 &ndash; Introduction to Psychology</li>
-              <li>PSYCH 45 &ndash; Introduction to Learning and Memory</li>
-              <li>PSYCH 195 &ndash; Special Laboratory Projects (Scaffolding of Cognition Lab)</li>
-              <li>HUMBIO 4A / HUMBIO 133 &ndash; The Human Organism / Human Physiology</li>
+              <li>BIOE 220 &middot; Imaging &amp; Image-Based Human Anatomy</li>
+              <li>MED 175B &middot; Biodesign Fundamentals</li>
+              <li>HUMBIO 4A &middot; The Human Organism</li>
+              <li>HUMBIO 133 &middot; Human Physiology</li>
             </ul>
           </div>
 
@@ -362,7 +376,7 @@
         <h2>Contact</h2>
         <p class="section-intro">
           I&rsquo;m happy to talk about research, software engineering, AI governance and policy, or anything at the
-          intersection of computation and real-world systems.
+          intersection of computation and real-world systems. Email is the fastest way to reach me.
         </p>
         <div class="contact-grid">
           <div>
@@ -387,12 +401,26 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Kenny Cepeda Ramos</p>
-      <p class="footer-note">Built by hand with HTML &amp; CSS. <span lang="es">Hecho con orgullo, del Bronx a Stanford.</span> <span aria-hidden="true">🇩🇴</span></p>
+      <p class="footer-note">Built by hand with HTML &amp; CSS. <span lang="es">Del Bronx a Stanford.</span></p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll progress accent under the header
+    (function () {
+      var bar = document.querySelector('.scroll-progress');
+      if (!bar) return;
+      function update() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
 
     // Scroll-reveal: classes are added here so the page stays fully
     // visible when JavaScript is unavailable.
