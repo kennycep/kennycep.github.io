@@ -20,7 +20,11 @@
   <meta name="twitter:image" content="https://kennycep.github.io/assets/img/headshot.jpg" />
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -49,6 +53,7 @@
         <div class="hero-text">
           <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
           <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
+          <p class="hero-heritage"><span class="flag" aria-hidden="true">🇩🇴</span>Bronx-raised, with Dominican roots. <span lang="es">Del Bronx, con ra&iacute;ces dominicanas.</span></p>
           <ul class="status-tags" aria-label="Availability">
             <li><span class="status-dot" aria-hidden="true"></span>Open to work</li>
             <li><span class="status-dot" aria-hidden="true"></span>Open to relocation</li>
@@ -382,12 +387,66 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Kenny Cepeda Ramos</p>
-      <p class="footer-note">Built by hand with HTML &amp; CSS.</p>
+      <p class="footer-note">Built by hand with HTML &amp; CSS. <span lang="es">Hecho con orgullo, del Bronx a Stanford.</span> <span aria-hidden="true">🇩🇴</span></p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll-reveal: classes are added here so the page stays fully
+    // visible when JavaScript is unavailable.
+    (function () {
+      var singles = document.querySelectorAll(
+        '.section h2, .section-intro, .projects-subhead, .two-column > div, .contact-grid'
+      );
+      var groups = document.querySelectorAll('.cards, .course-grid');
+      singles.forEach(function (el) { el.classList.add('reveal'); });
+      groups.forEach(function (el) { el.classList.add('reveal-group'); });
+
+      var pending = Array.prototype.slice.call(
+        document.querySelectorAll('.reveal, .reveal-group')
+      );
+
+      function show(el) {
+        el.classList.add('in-view');
+        var i = pending.indexOf(el);
+        if (i !== -1) pending.splice(i, 1);
+      }
+
+      // Rect-based check: reveals anything within (or above) the viewport.
+      // Used at load and as a scroll fallback so content can never stay
+      // hidden even if IntersectionObserver is unavailable or inert.
+      function sweep() {
+        var limit = window.innerHeight - 40;
+        pending.slice().forEach(function (el) {
+          if (el.getBoundingClientRect().top < limit) show(el);
+        });
+        if (!pending.length) {
+          window.removeEventListener('scroll', sweep);
+          window.removeEventListener('resize', sweep);
+        }
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                show(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+        pending.forEach(function (el) { observer.observe(el); });
+      }
+
+      window.addEventListener('scroll', sweep, { passive: true });
+      window.addEventListener('resize', sweep);
+      sweep();
+    })();
   </script>
 </body>
 </html>
