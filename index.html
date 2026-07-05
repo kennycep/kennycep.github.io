@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <title>Kenny Cepeda Ramos | Computation, Cognitive Science & Public-Interest Technology</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Kenny Cepeda Ramos is a Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy. Research, software engineering, and public-interest tech." />
+  <meta name="description" content="Kenny Cepeda Ramos is a Stanford Biomedical Computation student from the Bronx working across cognitive science research, AI and data systems, health, and governance." />
   <meta name="theme-color" content="#8c1515" />
   <link rel="canonical" href="https://kennycep.github.io/" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Kenny Cepeda Ramos | Computation, Cognitive Science & Public-Interest Technology" />
-  <meta property="og:description" content="Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy." />
-  <meta property="og:image" content="https://kennycep.github.io/assets/img/headshot.jpg" />
+  <meta property="og:description" content="Stanford Biomedical Computation student from the Bronx working across cognitive science research, AI and data systems, health, and governance." />
+  <meta property="og:image" content="https://kennycep.github.io/assets/img/hero-poster.jpg" />
   <meta property="og:url" content="https://kennycep.github.io/" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kenny Cepeda Ramos" />
-  <meta name="twitter:description" content="Stanford Biomedical Computation student from the Bronx working across computation, cognitive science, AI infrastructure, and technology policy." />
-  <meta name="twitter:image" content="https://kennycep.github.io/assets/img/headshot.jpg" />
+  <meta name="twitter:description" content="Stanford Biomedical Computation student from the Bronx working across cognitive science research, AI and data systems, health, and governance." />
+  <meta name="twitter:image" content="https://kennycep.github.io/assets/img/hero-poster.jpg" />
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,67 +29,103 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container nav-container">
       <a class="logo" href="#top" aria-label="Kenny Cepeda Ramos, back to top">
         <span class="logo-mark" aria-hidden="true">KCR</span>
         <span class="logo-text">Kenny Cepeda Ramos</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#projects">Projects</a>
-        <a href="#coursework">Foundation</a>
+        <a href="#research">Research</a>
+        <a href="#policy">Policy</a>
+        <a href="#software">Software</a>
+        <a href="#coursework">Coursework</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a href="#contact" class="btn header-btn">Get in touch</a>
     </div>
     <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <!-- Hero: scroll-controlled intro video. The outer .hero-scroll stage
-         provides the scroll distance; the inner .hero pins to the viewport
-         while scroll progress scrubs the video's currentTime. -->
-    <div class="hero-scroll" id="top">
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-text">
-            <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
-            <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
-            <ul class="status-tags" aria-label="Availability and background">
-              <li><span class="status-dot" aria-hidden="true"></span>Open to research, policy &amp; tech roles</li>
-              <li><span class="status-dot" aria-hidden="true"></span>Open to relocation</li>
-              <li class="tag-plain">Bronx, NYC &rarr; Stanford, CA</li>
-            </ul>
-            <p class="hero-subtitle">
-              I use computation and research methods to understand people, systems, and decisions. Software at
-              Amazon AGI, cognitive science research at Stanford, and a growing focus on AI, health, and policy.
-            </p>
-            <div class="hero-actions">
-              <a href="#projects" class="btn primary-btn">View work</a>
-              <a href="#experience" class="btn secondary-btn">Research</a>
-              <a href="#contact" class="btn secondary-btn">Contact</a>
-            </div>
-          </div>
-          <div class="hero-video-frame">
-            <video
-              id="hero-video"
-              muted
-              playsinline
-              preload="metadata"
-              poster="assets/img/hero-poster.jpg"
-              aria-label="Short animation of a cartoon kid in a red New York cap pulling down a projector screen, an intro to the portfolio below"
-            >
-              <source src="assets/video/hero-intro.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <p class="hero-scroll-hint" aria-hidden="true">Scroll</p>
-        </div>
-      </section>
-    </div>
+    <!-- Hero: full-screen background video (NYC skyline on the left,
+         Stanford on the right, a vinyl record and book stack in the
+         middle). Hotspots over those elements link into the site. -->
+    <section class="hero" id="top">
+      <video
+        class="hero-video"
+        id="hero-video"
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="assets/img/hero-poster.jpg"
+        aria-label="Looping background scene: a vinyl record and stack of books on a stone ledge at sunset, with the New York City skyline on the left and Stanford's campus on the right"
+      >
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-    <!-- About -->
+      <!-- Hotspots live in a box that mirrors the video's object-cover
+           geometry, so each zone tracks the on-screen books, record,
+           and skylines at any viewport size. Desktop only. -->
+      <div class="hero-hotspots" aria-hidden="false">
+        <a class="hotspot" href="#policy" style="left: 4%; top: 16%; width: 22%; height: 58%;">
+          <span class="hotspot-pill liquid-glass">Policy &amp; Public Interest</span>
+          <span class="sr-only">New York skyline: go to Policy and Public Interest</span>
+        </a>
+        <a class="hotspot" href="#coursework" style="left: 21%; top: 62%; width: 19%; height: 26%;">
+          <span class="hotspot-pill liquid-glass">Academic Foundation</span>
+          <span class="sr-only">Stack of books: go to Academic Foundation</span>
+        </a>
+        <a class="hotspot" href="#projects" style="left: 41%; top: 42%; width: 27%; height: 47%;">
+          <span class="hotspot-pill liquid-glass">Featured Work</span>
+          <span class="sr-only">Vinyl record: go to Featured Work</span>
+        </a>
+        <a class="hotspot" href="#research" style="left: 74%; top: 24%; width: 23%; height: 58%;">
+          <span class="hotspot-pill liquid-glass">Research</span>
+          <span class="sr-only">Stanford campus: go to Research</span>
+        </a>
+      </div>
+
+      <div class="container hero-content">
+        <p class="hero-badge liquid-glass">Bronx &rarr; Stanford</p>
+        <h1>Computation for cognition, health, and public impact.</h1>
+        <p class="hero-subtext">
+          I&rsquo;m Kenny Cepeda Ramos, a Stanford Biomedical Computation student working across cognitive
+          science research, AI and data systems, health, and governance.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary-btn">View my work</a>
+          <a href="#about" class="btn glass-btn liquid-glass">About me</a>
+          <a href="#contact" class="btn glass-btn liquid-glass">Get in touch</a>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="audio-toggle liquid-glass"
+        id="audio-toggle"
+        aria-pressed="false"
+        aria-label="Play background track, LA CANCIÓN"
+      >
+        <span class="audio-icon" aria-hidden="true"></span>
+        <span class="audio-label">Play track</span>
+      </button>
+      <audio id="hero-audio" src="assets/audio/la-cancion.mp3" loop preload="none"></audio>
+
+      <p class="hero-hint liquid-glass" aria-hidden="true">Explore the scene</p>
+    </section>
+
+    <!-- Mobile quick links: hotspot equivalents, hidden on desktop -->
+    <nav class="quick-links" aria-label="Section shortcuts">
+      <a href="#research">Research</a>
+      <a href="#policy">Policy</a>
+      <a href="#software">Software</a>
+      <a href="#coursework">Foundation</a>
+    </nav>
+
+    <!-- About snapshot -->
     <section id="about" class="section">
       <div class="container section-inner two-column">
         <div>
@@ -104,21 +140,9 @@
             legible. That pulled me toward the overlap of systems, data, and human behavior, and it never quite
             let go.
           </p>
-
-          <h3 class="about-subhead">What I work on now</h3>
-          <ul class="about-list">
-            <li><strong>Amazon AGI:</strong> infrastructure for Nova model customization and job-orchestration systems.</li>
-            <li><strong>Scaffolding of Cognition Lab:</strong> gaze-coding and behavioral data workflows for developmental cognition research.</li>
-            <li><strong>Coursework and student leadership</strong> centered on equity, governance, and how technology actually affects people.</li>
-          </ul>
-
-          <h3 class="about-subhead">Why policy matters to me</h3>
           <p>
-            The policy side is not an add-on. It is the part that makes the technical work worth doing. I am most
-            interested in AI governance: how models get evaluated, who sets the rules for deployment, and what
-            accountability looks like once a system is in use. That interest is grounded in coursework like CS 121
-            (Equity and Governance for Artificial Intelligence) and BIOE 131 (Ethics in Bioengineering), and in
-            projects like my Legal Risk Index, where litigation and public data intersect.
+            The short version: I use computational and research tools to understand people, systems, and
+            decisions, with interests in health, cognition, AI, and policy.
           </p>
         </div>
         <div class="about-highlights">
@@ -136,55 +160,16 @@
             <li><span class="label">Research:</span> Scaffolding of Cognition Lab (developmental cognition, gaze data)</li>
             <li><span class="label">Industry:</span> Software Engineering Intern, Amazon AGI (2 summers)</li>
             <li><span class="label">Leadership:</span> Resident Assistant &middot; Stanford Political Union Operations Committee &middot; CSA Vice President</li>
-            <li><span class="label">Focus areas:</span> AI governance &amp; policy, health &amp; cognition, public-interest technology</li>
+            <li><span class="label">Status:</span> Open to research, policy &amp; tech roles &middot; open to relocation</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Three paths -->
-    <section id="paths" class="section section-alt">
+    <!-- Featured Work -->
+    <section id="projects" class="section section-alt">
       <div class="container section-inner">
-        <h2>Three threads, one direction</h2>
-        <p class="section-intro">
-          The work moves between three spaces. They feed each other more than they compete.
-        </p>
-        <div class="paths">
-          <a class="path-card" href="#experience">
-            <p class="path-number" aria-hidden="true">01</p>
-            <h3>Research &amp; Cognitive Science</h3>
-            <p>
-              Behavioral and gaze data in Stanford&rsquo;s Scaffolding of Cognition Lab: coding, validating, and
-              analyzing how young children look and learn.
-            </p>
-            <span class="path-link" aria-hidden="true">Research experience &rarr;</span>
-          </a>
-          <a class="path-card" href="#coursework">
-            <p class="path-number" aria-hidden="true">02</p>
-            <h3>Policy, Governance &amp; Public Interest</h3>
-            <p>
-              AI governance coursework, the history of institutions and inequality, and data projects that treat
-              accountability as something you can build for.
-            </p>
-            <span class="path-link" aria-hidden="true">Academic foundation &rarr;</span>
-          </a>
-          <a class="path-card" href="#projects">
-            <p class="path-number" aria-hidden="true">03</p>
-            <h3>Software, AI &amp; Data</h3>
-            <p>
-              Two summers of infrastructure work on Amazon&rsquo;s Nova model customization systems, plus full-stack
-              tools like LabLog and ResearchRadar.
-            </p>
-            <span class="path-link" aria-hidden="true">Selected work &rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container section-inner">
-        <h2>Selected Projects</h2>
+        <h2>Featured Work</h2>
         <p class="section-intro">
           Work from research, internships, and classes, plus two full-stack apps I keep iterating on outside of
           coursework. Each one leans toward research, policy, or tech; most sit somewhere in between.
@@ -270,29 +255,15 @@
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section section-alt">
+    <!-- Research -->
+    <section id="research" class="section">
       <div class="container section-inner">
-        <h2>Experience</h2>
+        <h2>Research</h2>
         <p class="section-intro">
-          Industry infrastructure work and academic research, side by side. Both are about making systems
-          reliable enough for someone else to depend on them.
+          Cognitive science with real behavioral data: how young children look, learn, and build strategies,
+          and the analysis workflows that make those findings trustworthy.
         </p>
-
         <div class="cards">
-          <article class="card">
-            <header class="card-header">
-              <h3>Software Engineering Intern</h3>
-              <p class="card-subtitle">Amazon AGI &middot; Summer 2024 &amp; Summer 2025</p>
-            </header>
-            <ul class="card-list">
-              <li>Built and debugged infrastructure for Nova model customization and job-orchestration (job runner) systems used across internal ML workflows.</li>
-              <li>Improved pipeline reliability and logging so failures were diagnosable instead of silent, prioritizing traceability over quick patches.</li>
-              <li>Reviewed code and collaborated with engineers and applied scientists across two summers, learning to communicate technical trade-offs clearly.</li>
-              <li>Worked inside a large, fast-moving codebase and shipped changes that other teams&rsquo; infrastructure depended on.</li>
-            </ul>
-          </article>
-
           <article class="card">
             <header class="card-header">
               <h3>Research Assistant</h3>
@@ -309,28 +280,18 @@
       </div>
     </section>
 
-    <!-- Leadership -->
-    <section id="leadership" class="section">
+    <!-- Policy / Public Interest -->
+    <section id="policy" class="section section-alt">
       <div class="container section-inner">
-        <h2>Leadership &amp; Community</h2>
+        <h2>Policy &amp; Public Interest</h2>
         <p class="section-intro">
-          Outside research and engineering, most of my time has gone into building spaces and systems for the
-          people around me.
+          The policy side is not an add-on. It is the part that makes the technical work worth doing. I am most
+          interested in AI governance: how models get evaluated, who sets the rules for deployment, and what
+          accountability looks like once a system is in use. That interest is grounded in coursework on AI equity
+          and bioethics, in the history of institutions and inequality, and in the communities I come from and
+          have helped run.
         </p>
-
         <div class="cards">
-          <article class="card">
-            <header class="card-header">
-              <h3>Resident Assistant</h3>
-              <p class="card-subtitle">Stanford co-op housing</p>
-            </header>
-            <ul class="card-list">
-              <li>Coordinate house systems, programming, and conflict resolution for 50+ residents in a self-governing co-op.</li>
-              <li>Build lightweight tools for scheduling and task rotations to keep the house running smoothly.</li>
-              <li>Support residents through everything from day-to-day logistics to harder conversations.</li>
-            </ul>
-          </article>
-
           <article class="card">
             <header class="card-header">
               <h3>Operations Committee</h3>
@@ -340,6 +301,18 @@
               <li>Support operations for Stanford Political Union events, helping with the behind-the-scenes coordination that lets campus political programming run smoothly.</li>
               <li>The organization hosts large-scale events and has brought in speakers ranging from former U.S. Supreme Court Justice Stephen Breyer to public figures such as Curtis Sliwa.</li>
               <li>Help maintain a nonpartisan space for structured debate across the ideological spectrum, where disagreement is something to do well rather than avoid.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <h3>Resident Assistant</h3>
+              <p class="card-subtitle">Stanford co-op housing</p>
+            </header>
+            <ul class="card-list">
+              <li>Coordinate house systems, programming, and conflict resolution for 50+ residents in a self-governing co-op.</li>
+              <li>Build lightweight tools for scheduling and task rotations to keep the house running smoothly.</li>
+              <li>Support residents through everything from day-to-day logistics to harder conversations.</li>
             </ul>
           </article>
 
@@ -357,8 +330,38 @@
       </div>
     </section>
 
+    <!-- Software / AI / Data -->
+    <section id="software" class="section">
+      <div class="container section-inner">
+        <h2>Software, AI &amp; Data</h2>
+        <p class="section-intro">
+          Production infrastructure and full-stack tools. The common thread is systems other people can depend
+          on: traceable, debuggable, and honest about their failure modes.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <header class="card-header">
+              <h3>Software Engineering Intern</h3>
+              <p class="card-subtitle">Amazon AGI &middot; Summer 2024 &amp; Summer 2025</p>
+            </header>
+            <ul class="card-list">
+              <li>Built and debugged infrastructure for Nova model customization and job-orchestration (job runner) systems used across internal ML workflows.</li>
+              <li>Improved pipeline reliability and logging so failures were diagnosable instead of silent, prioritizing traceability over quick patches.</li>
+              <li>Reviewed code and collaborated with engineers and applied scientists across two summers, learning to communicate technical trade-offs clearly.</li>
+              <li>Worked inside a large, fast-moving codebase and shipped changes that other teams&rsquo; infrastructure depended on.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="section-note">
+          Outside of internships: <a href="#projects">LabLog and ResearchRadar</a>, two full-stack apps in active
+          development.
+        </p>
+      </div>
+    </section>
 
-    <!-- Coursework -->
+    <!-- Academic Foundation
+         To edit course names or add new ones, change the list items
+         below. Format: DEPT NUM · Course Title -->
     <section id="coursework" class="section section-alt">
       <div class="container section-inner">
         <h2>Academic Foundation</h2>
@@ -395,7 +398,6 @@
               <li>MED 175B &middot; Biodesign Fundamentals</li>
               <li>HUMBIO 4A &middot; The Human Organism</li>
               <li>HUMBIO 133 &middot; Human Physiology</li>
-              <li>Clinical Internship &middot; Stanford in Madrid</li>
             </ul>
           </div>
 
@@ -414,7 +416,15 @@
             <ul>
               <li>HISTORY 177C &middot; Rebeli&oacute;n: Black Resistance in the Caribbean</li>
               <li>HISTORY 178 &middot; Film &amp; History of Latin American Revolutions</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h3>Spain, International &amp; Clinical Context</h3>
+            <ul>
+              <li>Clinical Internship &middot; Stanford in Madrid</li>
               <li>Society, Politics &amp; Culture in Europe &middot; Stanford in Madrid</li>
+              <li>Introduction to Spanish Culture &middot; Stanford in Madrid</li>
             </ul>
           </div>
 
@@ -478,9 +488,9 @@
     // visible when JavaScript is unavailable.
     (function () {
       var singles = document.querySelectorAll(
-        '.section h2, .section-intro, .projects-subhead, .two-column > div, .contact-grid'
+        '.section h2, .section-intro, .projects-subhead, .two-column > div, .contact-grid, .section-note'
       );
-      var groups = document.querySelectorAll('.cards, .course-grid, .paths');
+      var groups = document.querySelectorAll('.cards, .course-grid');
       singles.forEach(function (el) { el.classList.add('reveal'); });
       groups.forEach(function (el) { el.classList.add('reveal-group'); });
 
@@ -494,9 +504,6 @@
         if (i !== -1) pending.splice(i, 1);
       }
 
-      // Rect-based check: reveals anything within (or above) the viewport.
-      // Used at load and as a scroll fallback so content can never stay
-      // hidden even if IntersectionObserver is unavailable or inert.
       function sweep() {
         var limit = window.innerHeight - 40;
         pending.slice().forEach(function (el) {
@@ -528,6 +535,6 @@
       sweep();
     })();
   </script>
-  <script src="assets/js/hero-video.js"></script>
+  <script src="assets/js/hero.js"></script>
 </body>
 </html>
