@@ -7,9 +7,11 @@ technology and policy.
 ## Structure
 
 ```
-index.html          Single-page site: hero, about, experience, leadership, projects, coursework, contact
-styles.css           All styles (no build step, no framework)
-assets/img/          Headshot and favicon
+index.html            Single-page site: hero, about, paths, projects, experience, leadership, foundation, contact
+styles.css             All styles (no build step, no framework)
+assets/img/            Headshot, hero poster frame, and favicon
+assets/video/          Scroll-scrubbed hero intro (all-keyframe H.264 so every frame seeks instantly)
+assets/js/             hero-video.js, the scroll-to-currentTime scrubbing logic
 ```
 
 I kept this framework-free on purpose. It's a single page, so a build pipeline would be more overhead than the

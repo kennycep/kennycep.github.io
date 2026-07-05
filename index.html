@@ -40,7 +40,7 @@
         <a href="#experience">Experience</a>
         <a href="#leadership">Leadership</a>
         <a href="#projects">Projects</a>
-        <a href="#coursework">Coursework</a>
+        <a href="#coursework">Foundation</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -48,47 +48,46 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" id="top">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
-          <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
-          <ul class="status-tags" aria-label="Availability and background">
-            <li><span class="status-dot" aria-hidden="true"></span>Open to research, policy &amp; tech roles</li>
-            <li><span class="status-dot" aria-hidden="true"></span>Open to relocation</li>
-            <li class="tag-plain">Bronx, NYC &rarr; Stanford, CA</li>
-          </ul>
-          <p class="hero-subtitle">
-            I&rsquo;m a Biomedical Computation student at Stanford, originally from the Bronx, working across
-            computation, cognitive science, AI, and public policy. I build the technical systems and analysis
-            workflows behind research and infrastructure, and I care just as much about who they&rsquo;re for.
-          </p>
-          <p class="hero-sub-subtitle">
-            Most recently: infrastructure work on Amazon&rsquo;s Nova model customization systems, and gaze-data
-            research in Stanford&rsquo;s Scaffolding of Cognition Lab.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn primary-btn">View my work</a>
-            <a href="#contact" class="btn secondary-btn">Get in touch</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <div class="photo-stage">
-            <span class="photo-orbit photo-orbit-outer" aria-hidden="true"></span>
-            <span class="photo-orbit photo-orbit-inner" aria-hidden="true"></span>
-            <div class="photo-frame">
-              <img
-                src="assets/img/headshot.jpg"
-                width="480"
-                height="480"
-                alt="Kenny Cepeda Ramos standing beside the Burghers of Calais sculptures at Stanford, wearing a Stanford graduation stole over a white shirt"
-              />
+    <!-- Hero: scroll-controlled intro video. The outer .hero-scroll stage
+         provides the scroll distance; the inner .hero pins to the viewport
+         while scroll progress scrubs the video's currentTime. -->
+    <div class="hero-scroll" id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-tagline">Stanford · Biomedical Computation · Bronx, NY</p>
+            <h1>Hi, I&rsquo;m Kenny Cepeda Ramos.</h1>
+            <ul class="status-tags" aria-label="Availability and background">
+              <li><span class="status-dot" aria-hidden="true"></span>Open to research, policy &amp; tech roles</li>
+              <li><span class="status-dot" aria-hidden="true"></span>Open to relocation</li>
+              <li class="tag-plain">Bronx, NYC &rarr; Stanford, CA</li>
+            </ul>
+            <p class="hero-subtitle">
+              I use computation and research methods to understand people, systems, and decisions. Software at
+              Amazon AGI, cognitive science research at Stanford, and a growing focus on AI, health, and policy.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn primary-btn">View work</a>
+              <a href="#experience" class="btn secondary-btn">Research</a>
+              <a href="#contact" class="btn secondary-btn">Contact</a>
             </div>
           </div>
+          <div class="hero-video-frame">
+            <video
+              id="hero-video"
+              muted
+              playsinline
+              preload="metadata"
+              poster="assets/img/hero-poster.jpg"
+              aria-label="Short animation of a cartoon kid in a red New York cap pulling down a projector screen, an intro to the portfolio below"
+            >
+              <source src="assets/video/hero-intro.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p class="hero-scroll-hint" aria-hidden="true">Scroll</p>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- About -->
     <section id="about" class="section">
@@ -123,6 +122,13 @@
           </p>
         </div>
         <div class="about-highlights">
+          <img
+            class="about-photo"
+            src="assets/img/headshot.jpg"
+            width="480"
+            height="480"
+            alt="Kenny Cepeda Ramos standing beside the Burghers of Calais sculptures at Stanford, wearing a Stanford graduation stole over a white shirt"
+          />
           <h3>At a glance</h3>
           <ul>
             <li><span class="label">From:</span> The Bronx, NYC</li>
@@ -132,6 +138,134 @@
             <li><span class="label">Leadership:</span> Resident Assistant &middot; Stanford Political Union Operations Committee &middot; CSA Vice President</li>
             <li><span class="label">Focus areas:</span> AI governance &amp; policy, health &amp; cognition, public-interest technology</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three paths -->
+    <section id="paths" class="section section-alt">
+      <div class="container section-inner">
+        <h2>Three threads, one direction</h2>
+        <p class="section-intro">
+          The work moves between three spaces. They feed each other more than they compete.
+        </p>
+        <div class="paths">
+          <a class="path-card" href="#experience">
+            <p class="path-number" aria-hidden="true">01</p>
+            <h3>Research &amp; Cognitive Science</h3>
+            <p>
+              Behavioral and gaze data in Stanford&rsquo;s Scaffolding of Cognition Lab: coding, validating, and
+              analyzing how young children look and learn.
+            </p>
+            <span class="path-link" aria-hidden="true">Research experience &rarr;</span>
+          </a>
+          <a class="path-card" href="#coursework">
+            <p class="path-number" aria-hidden="true">02</p>
+            <h3>Policy, Governance &amp; Public Interest</h3>
+            <p>
+              AI governance coursework, the history of institutions and inequality, and data projects that treat
+              accountability as something you can build for.
+            </p>
+            <span class="path-link" aria-hidden="true">Academic foundation &rarr;</span>
+          </a>
+          <a class="path-card" href="#projects">
+            <p class="path-number" aria-hidden="true">03</p>
+            <h3>Software, AI &amp; Data</h3>
+            <p>
+              Two summers of infrastructure work on Amazon&rsquo;s Nova model customization systems, plus full-stack
+              tools like LabLog and ResearchRadar.
+            </p>
+            <span class="path-link" aria-hidden="true">Selected work &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container section-inner">
+        <h2>Selected Projects</h2>
+        <p class="section-intro">
+          Work from research, internships, and classes, plus two full-stack apps I keep iterating on outside of
+          coursework. Each one leans toward research, policy, or tech; most sit somewhere in between.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <p class="card-domain">Research &middot; Tech</p>
+            <header class="card-header">
+              <h3>Gaze &amp; CounterCuing Analysis Pipeline</h3>
+              <p class="card-subtitle">Python &middot; Eye-tracking &middot; Data validation</p>
+            </header>
+            <ul class="card-list">
+              <li>A research analysis workflow for processing gaze and behavioral data from developmental cognition experiments.</li>
+              <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment, and adapted scripts across experiment versions.</li>
+              <li>Built validation checks comparing automated (OWLET) output against human-coded 2&times;2 Left/Right categorizations, so the lab can trust what the numbers say.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="card-domain">Policy &middot; Tech</p>
+            <header class="card-header">
+              <h3>Legal Risk Index</h3>
+              <p class="card-subtitle">SQL &middot; BigQuery &middot; Public data &middot; Course project</p>
+            </header>
+            <ul class="card-list">
+              <li>An exploration of how legal and regulatory risk can be structured and scored from public data, not a deployed legal product.</li>
+              <li>Queried millions of rows of litigation and financial data across firms and years, aggregating early and indexing joins to keep queries fast.</li>
+              <li>Built and visualized a simple risk signal linking litigation history to firm fundamentals, the kind of accountability-oriented data work that pulls me toward public-interest tech.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="card-domain">Community &middot; Tech</p>
+            <header class="card-header">
+              <h3>Co-op House Systems &amp; Tools</h3>
+              <p class="card-subtitle">Python &middot; Scripting &middot; Automation</p>
+            </header>
+            <ul class="card-list">
+              <li>Scripts that manage task assignments and rotations for a self-governing co-op house of 50+ residents.</li>
+              <li>Iterated on real housemate feedback instead of shipping a one-off script and walking away.</li>
+              <li>A small, honest example of building tools for people who are not engineers.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="projects-subhead">Personal Projects</h3>
+        <div class="cards cards-centered">
+          <article class="card">
+            <p class="card-domain">Research operations &middot; Tech</p>
+            <header class="card-header">
+              <h3>LabLog</h3>
+              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Supabase &middot; Full-stack</p>
+            </header>
+            <ul class="card-list">
+              <li>Research operations infrastructure: a private lab notebook for logging work sessions, hours, goals, tasks, and blockers, built for lab accountability.</li>
+              <li>Turns a week of entries into a clean Slack update or meeting agenda for a PI, so the reporting work stops eating research time.</li>
+              <li>Full Postgres schema in Supabase with Row Level Security and magic-link auth, so one account syncs privately between phone and laptop.</li>
+            </ul>
+            <p class="card-link">
+              <a href="https://github.com/kennycep/LabLog" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+              <a href="https://lab-log-two.vercel.app/" target="_blank" rel="noopener noreferrer">Live &rarr;</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card-domain">Public-interest tech &middot; Research access</p>
+            <header class="card-header">
+              <h3>ResearchRadar</h3>
+              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Tailwind CSS &middot; In progress</p>
+            </header>
+            <ul class="card-list">
+              <li>A research discovery platform that helps students find labs and opportunities through structured interests, location filters, and career stage, treating research access as infrastructure.</li>
+              <li>Includes a research news feed that surfaces world events affecting research funding and policy, not just paper alerts.</li>
+              <li>Phase 1 MVP is live with seeded data across every page; next up is real auth and a database, then live feeds from sources like PubMed and arXiv.</li>
+            </ul>
+            <p class="card-link">
+              <a href="https://github.com/kennycep/researchradar" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+              <a href="https://researchradar-mocha.vercel.app/" target="_blank" rel="noopener noreferrer">Live &rarr;</a>
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -223,106 +357,19 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section section-alt">
-      <div class="container section-inner">
-        <h2>Selected Projects</h2>
-        <p class="section-intro">
-          Work from research, internships, and classes, plus two full-stack apps I keep iterating on outside of
-          coursework. Each one leans toward research, policy, or tech; most sit somewhere in between.
-        </p>
-
-        <div class="cards">
-          <article class="card">
-            <p class="card-domain">Research &middot; Tech</p>
-            <header class="card-header">
-              <h3>Gaze &amp; CounterCuing Analysis Pipeline</h3>
-              <p class="card-subtitle">Python &middot; Eye-tracking &middot; Data validation</p>
-            </header>
-            <ul class="card-list">
-              <li>A research analysis workflow for processing gaze and behavioral data from developmental cognition experiments.</li>
-              <li>Diagnosed and fixed FPS and movie-length mismatches that were silently corrupting gaze-to-stimulus alignment, and adapted scripts across experiment versions.</li>
-              <li>Built validation checks comparing automated (OWLET) output against human-coded 2&times;2 Left/Right categorizations, so the lab can trust what the numbers say.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <p class="card-domain">Policy &middot; Tech</p>
-            <header class="card-header">
-              <h3>Legal Risk Index</h3>
-              <p class="card-subtitle">SQL &middot; BigQuery &middot; Public data &middot; Course project</p>
-            </header>
-            <ul class="card-list">
-              <li>An exploration of how legal and regulatory risk can be structured and scored from public data, not a deployed legal product.</li>
-              <li>Queried millions of rows of litigation and financial data across firms and years, aggregating early and indexing joins to keep queries fast.</li>
-              <li>Built and visualized a simple risk signal linking litigation history to firm fundamentals, the kind of accountability-oriented data work that pulls me toward public-interest tech.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <p class="card-domain">Community &middot; Tech</p>
-            <header class="card-header">
-              <h3>Co-op House Systems &amp; Tools</h3>
-              <p class="card-subtitle">Python &middot; Scripting &middot; Automation</p>
-            </header>
-            <ul class="card-list">
-              <li>Scripts that manage task assignments and rotations for a self-governing co-op house of 50+ residents.</li>
-              <li>Iterated on real housemate feedback instead of shipping a one-off script and walking away.</li>
-              <li>A small, honest example of building tools for people who are not engineers.</li>
-            </ul>
-          </article>
-        </div>
-
-        <h3 class="projects-subhead">Personal Projects</h3>
-        <div class="cards cards-centered">
-          <article class="card">
-            <p class="card-domain">Research operations &middot; Tech</p>
-            <header class="card-header">
-              <h3>LabLog</h3>
-              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Supabase &middot; Full-stack</p>
-            </header>
-            <ul class="card-list">
-              <li>Research operations infrastructure: a private lab notebook for logging work sessions, hours, goals, tasks, and blockers, built for lab accountability.</li>
-              <li>Turns a week of entries into a clean Slack update or meeting agenda for a PI, so the reporting work stops eating research time.</li>
-              <li>Full Postgres schema in Supabase with Row Level Security and magic-link auth, so one account syncs privately between phone and laptop.</li>
-            </ul>
-            <p class="card-link">
-              <a href="https://github.com/kennycep/LabLog" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
-              <a href="https://lab-log-two.vercel.app/" target="_blank" rel="noopener noreferrer">Live &rarr;</a>
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-domain">Public-interest tech &middot; Research access</p>
-            <header class="card-header">
-              <h3>ResearchRadar</h3>
-              <p class="card-subtitle">Next.js &middot; TypeScript &middot; Tailwind CSS &middot; In progress</p>
-            </header>
-            <ul class="card-list">
-              <li>A research discovery platform that helps students find labs and opportunities through structured interests, location filters, and career stage, treating research access as infrastructure.</li>
-              <li>Includes a research news feed that surfaces world events affecting research funding and policy, not just paper alerts.</li>
-              <li>Phase 1 MVP is live with seeded data across every page; next up is real auth and a database, then live feeds from sources like PubMed and arXiv.</li>
-            </ul>
-            <p class="card-link">
-              <a href="https://github.com/kennycep/researchradar" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
-              <a href="https://researchradar-mocha.vercel.app/" target="_blank" rel="noopener noreferrer">Live &rarr;</a>
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- Coursework -->
-    <section id="coursework" class="section">
+    <section id="coursework" class="section section-alt">
       <div class="container section-inner">
-        <h2>Relevant Coursework</h2>
+        <h2>Academic Foundation</h2>
         <p class="section-intro">
-          Selected coursework spanning computation, data systems, technology policy, and cognitive science.
+          Coursework grouped by theme rather than department. The history and Madrid coursework is where the
+          policy interest gets its grounding: institutions, inequality, and how societies remember.
         </p>
         <div class="course-grid">
 
           <div class="course-group">
-            <h3>Computing, Systems &amp; Data</h3>
+            <h3>Computation, AI &amp; Data</h3>
             <ul>
               <li>CS 106A &middot; Programming Methodology</li>
               <li>CS 106B &middot; Programming Abstractions</li>
@@ -338,31 +385,36 @@
           </div>
 
           <div class="course-group">
-            <h3>AI, Policy &amp; Ethics</h3>
-            <ul>
-              <li>CS 121 &middot; Equity &amp; Governance for Artificial Intelligence</li>
-              <li>BIOE 131 &middot; Ethics in Bioengineering</li>
-              <li>POLISCI 140P &middot; Populism &amp; the Erosion of Democracy</li>
-            </ul>
-          </div>
-
-          <div class="course-group">
-            <h3>Cognition, Psychology &amp; Development</h3>
+            <h3>Cognitive Science, Psychology &amp; Health</h3>
             <ul>
               <li>PSYCH 1 &middot; Introduction to Psychology</li>
               <li>PSYCH 35 &middot; Minds and Machines</li>
               <li>PSYCH 45 &middot; Introduction to Learning and Memory</li>
               <li>PSYCH 195 &middot; Special Laboratory Projects (Scaffolding of Cognition Lab)</li>
-            </ul>
-          </div>
-
-          <div class="course-group">
-            <h3>Biomedical Systems &amp; Health</h3>
-            <ul>
               <li>BIOE 220 &middot; Imaging &amp; Image-Based Human Anatomy</li>
               <li>MED 175B &middot; Biodesign Fundamentals</li>
               <li>HUMBIO 4A &middot; The Human Organism</li>
               <li>HUMBIO 133 &middot; Human Physiology</li>
+              <li>Clinical Internship &middot; Stanford in Madrid</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h3>Policy, Governance &amp; Ethics</h3>
+            <ul>
+              <li>CS 121 &middot; Equity &amp; Governance for Artificial Intelligence</li>
+              <li>BIOE 131 &middot; Ethics in Bioengineering</li>
+              <li>POLISCI 140P &middot; Populism &amp; the Erosion of Democracy</li>
+              <li>COLLEGE 109 &middot; Rules of War</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h3>History, Society &amp; Global Context</h3>
+            <ul>
+              <li>HISTORY 177C &middot; Rebeli&oacute;n: Black Resistance in the Caribbean</li>
+              <li>HISTORY 178 &middot; Film &amp; History of Latin American Revolutions</li>
+              <li>Society, Politics &amp; Culture in Europe &middot; Stanford in Madrid</li>
             </ul>
           </div>
 
@@ -371,7 +423,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container section-inner">
         <h2>Contact</h2>
         <p class="section-intro">
@@ -428,7 +480,7 @@
       var singles = document.querySelectorAll(
         '.section h2, .section-intro, .projects-subhead, .two-column > div, .contact-grid'
       );
-      var groups = document.querySelectorAll('.cards, .course-grid');
+      var groups = document.querySelectorAll('.cards, .course-grid, .paths');
       singles.forEach(function (el) { el.classList.add('reveal'); });
       groups.forEach(function (el) { el.classList.add('reveal-group'); });
 
@@ -476,5 +528,6 @@
       sweep();
     })();
   </script>
+  <script src="assets/js/hero-video.js"></script>
 </body>
 </html>
