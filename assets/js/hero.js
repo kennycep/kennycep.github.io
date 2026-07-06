@@ -93,6 +93,9 @@
     function onScroll() {
       var past = window.scrollY > hero.offsetHeight - 90;
       header.classList.toggle('scrolled', past);
+      // Past the hero, the audio pill floats only while the track
+      // plays; the CSS handles hiding it otherwise.
+      if (toggle) toggle.classList.toggle('offscene', past);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
