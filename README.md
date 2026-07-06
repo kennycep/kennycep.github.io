@@ -11,7 +11,7 @@ index.html            Single-page site: hero, about, featured work, research, po
 styles.css             All styles (no build step, no framework)
 assets/img/            Headshot, hero poster frame, and favicon
 assets/video/          Full-screen hero background loop (muted H.264)
-assets/audio/          Optional hero audio track (git-ignored; see .gitignore for why)
+assets/audio/          Optional hero audio track (royalty-free; commercial recordings stay out of this repo)
 assets/js/             hero.js: background video, audio fades, header state
 ```
 

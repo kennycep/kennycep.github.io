@@ -1,9 +1,5 @@
-# Audio tracks are kept out of the public repo: "LA CANCIÓN" is a
-# commercial recording, and committing it here would publicly
-# distribute it via GitHub Pages. The player at assets/js/hero.js
-# handles the file's absence gracefully. To ship audio, place a track
-# you have the rights to at assets/audio/la-cancion.mp3 and remove
-# this rule.
-assets/audio/*.mp3
+# The committed track (assets/audio/la-cancion.mp3) is a
+# royalty-free recording. Do not commit commercial recordings here:
+# GitHub Pages would publicly distribute them.
 
 .DS_Store
