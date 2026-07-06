@@ -62,9 +62,16 @@
             toggle.setAttribute('aria-pressed', 'true');
             toggle.classList.add('playing');
             setLabel('Pause track');
-          }).catch(function () {
-            /* Blocked by the browser or the file is absent. */
-            setLabel('Tap to enable audio');
+          }).catch(function (err) {
+            if (err && err.name === 'NotAllowedError') {
+              /* Autoplay policy: needs a (nother) user gesture. */
+              setLabel('Tap to enable audio');
+            } else {
+              /* Source missing or undecodable, e.g. the track is not
+                 committed to the public repo. */
+              toggle.disabled = true;
+              setLabel('Track unavailable');
+            }
           });
         }
       } else {
